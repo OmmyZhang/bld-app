@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         });
         myWebView.getSettings().setJavaScriptEnabled(true);
 
-        myWebView.loadUrl("https://team.thubx.com");
+        myWebView.loadUrl(getString(R.string.base_url));
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
                 Snackbar.make(view, "上传积分..", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
                 giv.setVisibility(View.VISIBLE);
-                myWebView.loadUrl("https://team.thubx.com/score/add/");
+                myWebView.loadUrl(getString(R.string.base_url) + "/score/add/");
             }
         });
     }
@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
-
+/*
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
+*/
     @Override
     public boolean onKeyDown(int keyCoder,KeyEvent event){
         if(myWebView.canGoBack() && keyCoder == KeyEvent.KEYCODE_BACK){
@@ -94,4 +94,28 @@ public class MainActivity extends AppCompatActivity {
         }
         return false;
     }
+
+    public void go_home(MenuItem it)
+    {
+        myWebView.loadUrl(getString(R.string.base_url));
+    }
+    public void go_google(MenuItem it)
+    {
+        go_port(9009);
+    }
+
+    public void go_google_scholar(MenuItem it)
+    {
+        go_port(8009);
+    }
+    public void go_youtube(MenuItem it)
+    {
+        go_port(7009);
+    }
+    private void go_port(int p)
+    {
+        myWebView.loadUrl(getString(R.string.base_url) + ":" + p);
+    }
+
+
 }

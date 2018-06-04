@@ -3,8 +3,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.debate.thu.webapp.MainActivity">
     <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:title="@string/action_settings"
-        app:showAsAction="never" />
+        android:id="@+id/action_google"
+        android:title="@string/action_google"
+        app:showAsAction="never"
+        android:onClick="go_google"/>
+    <item
+        android:id="@+id/action_google_scholar"
+        android:title="@string/action_google_scholar"
+        app:showAsAction="never"
+        android:onClick="go_google_scholar"/>
+    <item
+        android:id="@+id/action_youtube"
+        android:title="@string/action_youtube"
+        app:showAsAction="never"
+        android:onClick="go_youtube"/>
+    <item
+        android:id="@+id/action_home"
+        android:icon="@drawable/ic_home"
+        android:title="@string/action_home"
+        app:showAsAction="ifRoom"
+        android:onClick="go_home"/>
+
 </menu>

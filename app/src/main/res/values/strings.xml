@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">清辩积分</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_google">谷狗</string>
+    <string name="action_google_scholar">谷狗穴鼠</string>
+    <string name="action_youtube">优兔网</string>
+    <string name="action_home">回主页</string>string>
+    <string name="base_url"> https://thu-debate.com</string>string>
 </resources>
